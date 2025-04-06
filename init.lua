@@ -1,16 +1,22 @@
-require("ohpxho.plugins-setup")
-require("ohpxho.core.options")
-require("ohpxho.core.keymaps")
-require("ohpxho.core.colorscheme")
-require("ohpxho.plugins.comment")
-require("ohpxho.plugins.nvim-tree")
-require("ohpxho.plugins.lualine")
-require("ohpxho.plugins.telescope")
-require("ohpxho.plugins.nvim-cmp")
-require("ohpxho.plugins.lsp.mason")
-require("ohpxho.plugins.lsp.lspsaga")
-require("ohpxho.plugins.lsp.lspconfig")
-require("ohpxho.plugins.lsp.null-ls")
-require("ohpxho.plugins.autopairs")
-require("ohpxho.plugins.treesitter")
-require("ohpxho.plugins.gitsigns")
+-- Set leader key before loading lazy
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- Load configurations
+require("lazy").setup("plugins")
+require("core.options")
+require("core.keymaps")

@@ -1,2 +1,2 @@
-# cursor-neovim-setup
-My personal neovim setup in cursor including cursor config files
+# nvim-setup
+My personal Neovim setup.

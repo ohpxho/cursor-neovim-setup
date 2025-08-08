@@ -88,6 +88,7 @@ return packer.startup(function(use)
 
 	-- formatting & linting
 	use("mfussenegger/nvim-lint")
+  use("stevearc/conform.nvim")
 
 	-- treesitter configuration
 	use({

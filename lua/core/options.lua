@@ -11,7 +11,10 @@ opt.expandtab = true
 opt.autoindent = true
 
 -- Line wrapping
-opt.wrap = false
+opt.wrap = true
+
+-- Line break
+opt.linebreak = true
 
 -- Search settings
 opt.ignorecase = true
@@ -40,3 +43,4 @@ opt.iskeyword:append("-")
 
 -- Disable swap file
 opt.swapfile = false 
+

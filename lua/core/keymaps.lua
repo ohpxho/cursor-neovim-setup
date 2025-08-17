@@ -26,6 +26,8 @@ keymap.set("n", "<leader>ff", vscode("workbench.action.quickOpen"), { desc = "Qu
 keymap.set("n", "<leader>cp", vscode("workbench.action.showCommands"), { desc = "Show commands" })
 keymap.set("n", "<leader>pr", vscode("code-runner.run"), { desc = "Run code" })
 keymap.set("n", "<leader>fd", vscode("editor.action.formatDocument"), { desc = "Format document" })
+keymap.set("n", "j", "gj")
+keymap.set("n", "k", "gk")
 
 -- Harpoon keymaps
 keymap.set("n", "<leader>ha", vscode("vscode-harpoon.addEditor"), { desc = "Harpoon add" })
